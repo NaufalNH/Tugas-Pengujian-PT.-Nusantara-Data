@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Implementasi Tampilan Login
 
-## Getting Started
+Jika anda menemukan error hydration saat me-run project ini, itu dikarenakan ekstensi browser seperti colorzila, jadi mohon untuk dinonaktifkan sementara jika anda menemukan error hydration ini.
 
-First, run the development server:
+## Akun
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    - Hak Akses
+    	Phone   : admin@gmail.com
+    	Password: NQlpF5Rieap7QpclD^bP
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Fitur
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Autentikasi dan Otorisasi**
+- **Logout**
+- **Visualisasi Data**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Struktur Folder
 
-## Learn More
+- `/app`: Berisi laman page yang ditampilkan.
+- `/components`: Berisi komponen-komponen.
+- `/api`: Berisi api endpoint ( saya menggunakannya karena api tertujunya http jadi terhalang oleh CORS, jadi saya mennggunakan api ini sebagai penengah ).
+- `/constant`: Berisi data yang konstan.
+- `/components/auth`: Berisi wrapper untuk otorisasi.
+- `/components/chart`: Berisi chart untuk visualisasi data.
+- `/components/layout`: Berisi komponen yang akan dipakai untuk layout.
+- `/components/modal`: Berisi komponen modal.
+- `/components/pages`: Berisi tampilan yang akan ditampilkan ke app.
 
-To learn more about Next.js, take a look at the following resources:
+## Package Yang Digunakan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `axios`: Untuk send request ke api.
+- `js-cookie`: Untuk menyimpan session dan otorisasi.
+- `react-apexcharts`: Untuk memvisualisasikan data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Alasan Memilih Metode Visualisasi
 
-## Deploy on Vercel
+- `Line chart`: Agar kita dapat melihat naik atau turun-nya penjualan pada setiap bulan.
+- `Pie chart`: Agar kita mengetahui apa yang lebih dibutuhkan konsumen dengan mengetahui presentase barang apa yang lebih mudah dijual atau sering dicari konsumen.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Cara Menjalankan Aplikasi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone repositori ini ke mesin lokal Anda.
+2. Jalankan `npm install` atau `yarn install` untuk menginstal package yang ada (hanya diperlukan sekali setelah clone project).
+3. Jalankan `npm run dev` atau `yarn dev` untuk menjalankan project dalam mode development, pada mode development saat berpindah page akan sedikit lama karena akan mengcompile page tersebut untuk memperbarui perubahan.
+4. Jalankan `npm run build` atau `yarn build` untuk membuild project jika anda ingin melihat performa project jika seandainya sudah di deploy dan anda juga dapat melihat error ESlint Rule yang tidak akan terlihat jika tidak menjalankan command ini.
+5. Jalankan `npm start` atau `yarn start` untuk menjalankan hasil build sebelumnya, berbeda dengan saat mode development yang mecompile setiap file setiap berpindah file pada mode ini project ini hanya menjalankan hasil build yang sudah ada seperti jika sudah dideploy.

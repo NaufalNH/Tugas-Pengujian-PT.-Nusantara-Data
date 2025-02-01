@@ -1,0 +1,12 @@
+[
+    { "date": "2025-01-01", "type": "Kosmetik", "sold": 10, "product_name": "Lipstik" },
+    { "date": "2025-01-1", "type": "Busana", "sold": 2, "product_name": "Kerudung" },
+    { "date": "2025-01-1", "type": "Busana", "sold": 4, "product_name": "Kaos" },
+    { "date": "2025-02-21", "type": "Kosmetik", "sold": 1, "product_name": "Lipstik" },
+    { "date": "2025-02-2", "type": "Kosmetik", "sold": 3, "product_name": "Lipstik" },
+    { "date": "2025-03-2", "type": "Kosmetik", "sold": 4, "product_name": "Lipstik" },
+    { "date": "2025-03-22", "type": "Busana", "sold": 4, "product_name": "Kemeja" },
+    { "date": "2025-03-22", "type": "Busana", "sold": 3 , "product_name": "Baju Koko"},
+    { "date": "2025-07-22", "type": "Busana", "sold": 2 , "product_name": "Baju Koko"}
+  ]
+  
