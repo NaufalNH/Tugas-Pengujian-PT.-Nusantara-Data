@@ -24,12 +24,20 @@ const Wrapper = ({ children, needLogin = false, requiredRoles = [] }) => {
 
         const role = profile?.idRole;
         if (!needLogin && !role) {
-            // router.push('/');
+            
         } else if (needLogin) {
-            if (!role || (requiredRoles.length && !requiredRoles.includes(role))) {
-                router.push('/');
+            if (role) {
+                if (requiredRoles.length) {
+                    if (requiredRoles.includes(role)) {
+                        
+                    } else {
+                        router.push('/');
+                    }
+                } else {
+                    
+                }
             } else {
-                // router.push('/dashboard');
+                router.push('/');
             }
         } else if (currentUrl === "/" && role) {
             router.push('/dashboard');
